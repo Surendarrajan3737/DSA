@@ -4,15 +4,12 @@
 using namespace std;
 
 void Display(int n,int m,vector<int>& arr){
+    int z=0;
     for(int i=0;i<4;i++){
-        if(arr[i] == n){
-            cout << "The missing ele is " << m << '\n';
-            cout << "The duplicate ele is " << n << '\n';
-            return ;
-        }
-        else if(arr[i] == m){
-            cout << "The missing ele is " << n << '\n';
-            cout << "The duplicate ele is " << m << '\n';
+        if(arr[i] == n || arr[i] == m){
+            z = arr[i];
+            cout << "The duplicate is : " << z;
+            break;
         }
     }
 }
