@@ -1,6 +1,7 @@
 class Solution(){
     void dfs(int node,vector<int> &vis,vector<int> adj[],vector<int> &arrdfs){
         arrdfs.push_back(node);
+	vis[node] = 1;			// If misssed it resulted in Highest memory conceeded
         // adjacency recursive call
         for(auto x : adj[node]){
             if(!vis[x]){
