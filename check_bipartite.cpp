@@ -23,7 +23,7 @@ bool bfs(int node,vector<int> adj[],vector<int>& colour){
 
 bool Bipartite_graph(vector<int> adj[],int V){
     vector<int> colour(V+1,-1);
-    for(int i=1;i<=V;i++){
+    for(int i=0;i<V;i++){
         if(colour[i] == -1){
             if(!bfs(i,adj,colour)) return false;
         }
